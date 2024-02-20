@@ -7,6 +7,8 @@ var adultNum=0;
 var childNum=0;
 var iconin=Icons.task_alt;
 var iconcolor= 0xFFFFA500;
+var adultColor=0xFF000000;
+var timeColor=0xFF000000;
 void main() {
   runApp(const confirmPage());
 }
@@ -218,6 +220,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   Mesg2='You did not choose the booking time';
                   iconin=Icons.priority_high;
                   iconcolor=0xFFFF0000;
+                  timeColor=0xFFFF0000;
+                  adultColor=0xFF000000;
                 }
                 else {
                   if(adultNum<=0) {
@@ -225,12 +229,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     Mesg2='A table must at least have one adult';
                     iconin=Icons.priority_high;
                     iconcolor=0xFFFF0000;
+                    adultColor=0xFFFF0000;
+                    timeColor=0xFF000000;
                   }
                   else {
-                    Mesg = 'Your booking has been confirmed';
+                    Mesg = 'Booking confirmed';
                     Mesg2 = 'See you soon';
                     iconin=Icons.task_alt;
                     iconcolor=0xFFFFA500;
+                    adultColor=0xFF000000;
+                    timeColor=0xFF000000;
                   }
                     }
 
@@ -266,7 +274,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.schedule),
+                                  Icon(Icons.schedule,
+                                  color: Color(timeColor),),
                                   SizedBox(width: 4,),
                                   Text('$time_book:00 PM',
                                     style: TextStyle(fontWeight: FontWeight.bold),),
@@ -280,7 +289,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.person),
+                                  Icon(Icons.person,
+                                  color: Color(adultColor),),
                                   SizedBox(width: 4,),
                                   Text('$adultNum ',
                                     style: TextStyle(fontWeight: FontWeight.bold),),
