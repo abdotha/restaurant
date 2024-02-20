@@ -231,7 +231,82 @@ class _MyHomePageState extends State<MyHomePage> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                       );
+                        title: Text(Mesg,
+                          style: TextStyle(fontWeight: FontWeight.bold,
+                          fontSize: 25),),
+
+                        content: SizedBox(
+                          height: 180,
+                          child: Column(
+                            children: [
+                              Text(Mesg2,
+                            style: TextStyle(fontSize: 20,),),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text('-------------------------------------'),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.schedule),
+                                  SizedBox(width: 4,),
+                                  Text('$time_book:00 PM',
+                                    style: TextStyle(fontWeight: FontWeight.bold),),
+                                ],
+                              ),
+                              Row(
+                                children: [
+
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.person),
+                                  SizedBox(width: 4,),
+                                  Text('$adultNum ',
+                                    style: TextStyle(fontWeight: FontWeight.bold),),
+                                  Text(':person',),
+                                  SizedBox(width: 5,),
+                                  Text('.',
+                                  style: TextStyle(fontWeight: FontWeight.bold),),
+                                  SizedBox(width: 5,),
+                                  Icon(Icons.child_care),
+                                  SizedBox(width: 4,),
+                                  Text('$childNum ',
+                                    style: TextStyle(fontWeight: FontWeight.bold),),
+                                  Text(':kids',),
+
+
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        actions: [
+                          Center(
+                            child: Container(
+                              width:200,
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xffBBD4CE)), // Set your desired background color
+                                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.0), // Adjust the radius as needed
+                                    ),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  // Close the dialog when this button is pressed
+                                  Navigator.of(context).pop();
+                                },
+                                child: Text('Close',
+                                style: TextStyle(color:Colors.black ),),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
                     },
                   );
                 },
