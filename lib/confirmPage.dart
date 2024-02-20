@@ -5,6 +5,8 @@ var Mesg='test';
 var Mesg2='test2';
 var adultNum=0;
 var childNum=0;
+var iconin=Icons.task_alt;
+var iconcolor= 0xFFFFA500;
 void main() {
   runApp(const confirmPage());
 }
@@ -214,15 +216,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 if(time_book<=0) {
                   Mesg = 'Error';
                   Mesg2='You did not choose the booking time';
+                  iconin=Icons.priority_high;
+                  iconcolor=0xFFFF0000;
                 }
                 else {
                   if(adultNum<=0) {
                     Mesg = 'Error';
                     Mesg2='A table must at least have one adult';
+                    iconin=Icons.priority_high;
+                    iconcolor=0xFFFF0000;
                   }
                   else {
                     Mesg = 'Your booking has been confirmed';
                     Mesg2 = 'See you soon';
+                    iconin=Icons.task_alt;
+                    iconcolor=0xFFFFA500;
                   }
                     }
 
@@ -231,9 +239,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text(Mesg,
-                          style: TextStyle(fontWeight: FontWeight.bold,
-                          fontSize: 25),),
+                        title: Column(
+                          children: [
+                            SizedBox(
+                              height:80,
+                              child: Icon(iconin,
+                              color: Color(iconcolor),
+                              size: 80,),
+                            ),
+                            Text(Mesg,
+                              style: TextStyle(fontWeight: FontWeight.bold,
+                              fontSize: 25),),
+                          ],
+                        ),
 
                         content: SizedBox(
                           height: 180,
