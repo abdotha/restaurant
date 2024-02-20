@@ -275,10 +275,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(Icons.schedule,
-                                  color: Color(timeColor),),
+                                 ),
                                   SizedBox(width: 4,),
                                   Text('$time_book:00 PM',
-                                    style: TextStyle(fontWeight: FontWeight.bold),),
+                                    style: TextStyle(color: Color(timeColor),
+                                        fontWeight: FontWeight.bold),),
                                 ],
                               ),
                               Row(
@@ -289,11 +290,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.person,
-                                  color: Color(adultColor),),
+                                  Icon(Icons.person,),
                                   SizedBox(width: 4,),
                                   Text('$adultNum ',
-                                    style: TextStyle(fontWeight: FontWeight.bold),),
+                                    style: TextStyle(color:Color(adultColor),
+                                        fontWeight: FontWeight.bold),),
                                   Text(':person',),
                                   SizedBox(width: 5,),
                                   Text('.',

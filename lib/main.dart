@@ -405,7 +405,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         MaterialPageRoute(builder: (context) => confirmPage()),);
 
               },
-                  child: Text("Confirm")),
+                  child: Text("Continue")),
             )
 
 
