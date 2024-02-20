@@ -398,7 +398,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   onPressed: () {
 
-                    print(time_book);
+                    print('time booked=$time_book');
 
                     Navigator.push(
                         context,
