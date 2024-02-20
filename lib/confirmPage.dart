@@ -233,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       return AlertDialog(
                         title: Text(Mesg,
                           style: TextStyle(fontWeight: FontWeight.bold,
-                          fontSize: 30),),
+                          fontSize: 25),),
 
                         content: SizedBox(
                           height: 180,
