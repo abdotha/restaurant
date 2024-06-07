@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     child:  const Text(
-                      'restaurant Name',
+                      'Restaurant Name',
                       style: TextStyle(color: Colors.white, fontSize: 40,
                           fontWeight: FontWeight.bold),
                     ),
@@ -115,22 +115,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text('$time_book PM',
-                    style: TextStyle(fontSize: 20,
-                        color: Colors.green,
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xff93c4b3),
                         fontWeight: FontWeight.bold),),
                   Icon(Icons.schedule),
                   Text('|',
                     style:TextStyle(fontSize: 25,
                     ),),
                   Text('$adultNum Adult',
-                    style: TextStyle(fontSize: 20,
-                        color: Colors.green,
+                    style: TextStyle(
+                        color: Color(0xff93c4b3),
+                        fontSize: 20,
                         fontWeight: FontWeight.bold),),
                   Text('|',
                     style:TextStyle(fontSize: 25),),
                   Text('$childNum Children',
                     style: TextStyle(fontSize: 20,
-                        color: Colors.green,
+                        color: Color(0xff93c4b3),
                         fontWeight: FontWeight.bold),),
                 ],
               ),
@@ -151,6 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
 
                 FloatingActionButton(
+                  backgroundColor: Color(0xffBBD4CE),
                   child: Icon(Icons.add),
                   onPressed: () {
                     setState(() {
@@ -160,6 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text('$adultNum',
                     style:TextStyle(fontSize: 50,)),
                 FloatingActionButton(
+                  backgroundColor: Color(0xffBBD4CE),
                   child: Icon(Icons.remove),
                   onPressed: () {
                     setState(() {
@@ -180,6 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 FloatingActionButton(
+                  backgroundColor: Color(0xffBBD4CE),
                   child: Icon(Icons.add),
                   onPressed: () {
                     setState(() {
@@ -189,6 +194,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text('$childNum',
                     style:TextStyle(fontSize: 50,)),
                 FloatingActionButton(
+                  backgroundColor: Color(0xffBBD4CE),
                   child: Icon(Icons.remove),
                   onPressed: () {
                     setState(() {
